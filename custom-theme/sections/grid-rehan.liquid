@@ -1,0 +1,32 @@
+<section class="rehan-grid">
+  <div class="wrap">
+    {% for i in (1..6) %}
+      {% assign id = 'product_' | append: i %}
+      {% assign prod = all_products[section.settings[id]] %}
+      <article class="card" {% if prod %}data-handle="{{ prod.handle }}"{% endif %}>
+        {% if prod and prod.featured_image %}
+          <img src="{{ prod.featured_image | img_url: '540x' }}" alt="{{ prod.title }}">
+          <h3>{{ prod.title }}</h3>
+          <button type="button" class="open-quick">+</button>
+        {% else %}
+          <div class="placeholder">Select a product</div>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rehan Grid (6)",
+  "settings": [
+    { "type": "product", "id": "product_1", "label": "Product 1" },
+    { "type": "product", "id": "product_2", "label": "Product 2" },
+    { "type": "product", "id": "product_3", "label": "Product 3" },
+    { "type": "product", "id": "product_4", "label": "Product 4" },
+    { "type": "product", "id": "product_5", "label": "Product 5" },
+    { "type": "product", "id": "product_6", "label": "Product 6" }
+  ],
+  "presets": [{ "name": "Rehan Grid (6)" }]
+}
+{% endschema %}

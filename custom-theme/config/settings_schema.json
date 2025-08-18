@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Theme settings",
+    "settings": [
+      {
+        "type": "text",
+        "id": "dummy",
+        "label": "Dummy Text",
+        "default": "Enter text here"
+      }
+    ]
+  }
+]

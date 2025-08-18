@@ -1,0 +1,8 @@
+{
+  "name": "Home",
+  "sections": {
+    "banner": { "type": "banner-rehan", "settings": {} },
+    "grid":   { "type": "grid-rehan",   "settings": {} }
+  },
+  "order": ["banner", "grid"]
+}

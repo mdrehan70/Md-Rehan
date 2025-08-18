@@ -1,0 +1,8 @@
+body { font-family: system-ui, Arial; margin: 0; }
+.rehan-banner { padding: 80px 16px; text-align: center; border-bottom: 1px solid #eee; }
+.rehan-banner .cta a { display:inline-block; margin:8px; padding:12px 18px; border:1px solid #111; text-decoration:none; }
+.rehan-grid .wrap { max-width: 1280px; margin: 32px auto; display:grid; gap:16px; grid-template-columns: repeat(3, minmax(0,1fr)); padding:0 16px; }
+.rehan-grid .card { border:1px solid #ddd; border-radius:12px; padding:12px; text-align:center; position:relative; }
+.rehan-grid img { width:100%; height:auto; border-radius:8px; }
+.rehan-grid .open-quick { position:absolute; right:10px; top:10px; width:28px; height:28px; border-radius:50%; border:1px solid #111; background:#fff; }
+.placeholder { padding:60px 0; color:#999; }

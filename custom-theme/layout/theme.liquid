@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page_title }}{% if shop.name %} – {{ shop.name }}{% endif %}</title>
+  {{ content_for_header }}
+  <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
+</head>
+<body>
+  <main id="main">{{ content_for_layout }}</main>
+  <script>window.money_format = {{ shop.money_format | json }};</script>
+  <script src="{{ 'theme.js' | asset_url }}" defer></script>
+</body>
+</html>
