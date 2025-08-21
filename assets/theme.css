@@ -541,7 +541,7 @@ p#popupPrice.popup-price{
   }
 
   .rehan-topbar .brand {
-    text-align: center;
+    align-items: center;
   }
 
   img{ 
