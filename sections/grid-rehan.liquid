@@ -83,5 +83,33 @@
         </div>
     </div>
 
-    
+    {% comment %} Popup {% endcomment %}
+     <div class="popup hidden" id="popupContainer">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <div class="popup-left">
+                <img src="" alt="">
+            </div>
+            <div class="popup-right">
+                <h2 id="popupTitle"></h2>
+                <p id="popupPrice" class="popup-price"></p>
+                <p id="popupDesc"></p>
 
+                <div id="popupOptions"></div>
+                <button class="add-to-cart">ADD TO CART →</button>
+            </div>
+        </div>
+    </div>
+
+    {% if section.settings.soft_jacket_product != blank %}
+        {% assign softp = all_products[section.settings.soft_jacket_product] %}
+        {% if softp %}
+            <script type="application/json" id="soft-bundle">
+                {
+                    "title": {{ softp.title | json }},
+                    "first_variant_id": {{ softp.first_available_variant.id | json }}
+                }
+            </script>
+        {% endif %}
+    {% endif %}
+</section>
