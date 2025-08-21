@@ -154,4 +154,47 @@ a {
     color: var(--black);
 }
 
+.rehan-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
 
+.rehan-topbar {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    text-align: center;
+    gap: 90px;
+    padding: 10px 50px;
+    background: var(--gray-100);
+}
+
+.rehan-topbar .brand {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-weight: 600;
+}
+
+.rehan-topbar .topbar-text {
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+}
+
+.rehan-topbar .btn {
+    width: 207px;
+    height: 44px;
+}
+
+.hamburger {
+    display: none;
+    width: 18px;
+    height: 10px;
+    border: 2px solid #000000;
+    position: relative;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
