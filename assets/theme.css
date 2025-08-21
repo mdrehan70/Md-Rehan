@@ -222,3 +222,13 @@ a {
 .hamburger::after {
     bottom: 0;
 }
+
+/* hero */
+.rehan-hero {
+    min-height: 780px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-image: var(--hero-bg);
+}
