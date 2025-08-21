@@ -538,11 +538,11 @@ p#popupPrice.popup-price{
     padding: 12px 12px;
     background: var(--gray-200);
     box-shadow: 0 2px 4px rgba(0,0,0,.08);
-  }
-
-  .rehan-topbar .brand {
     align-items: center;
   }
+
+  /* .rehan-topbar .brand {
+  } */
 
   img{ 
     max-width:100%; 
