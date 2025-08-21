@@ -338,3 +338,19 @@ a {
     opacity: 0;
     transition: opacity .3s ease;
 }
+
+.popup.active {
+    display: flex;
+    opacity: 1;
+}
+
+.popup-content {
+    background: #ffffff;
+    width: 450px;
+    max-width: 95%;
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    transform: translateY(30px);
+    transition: transform .3s ease;
+}
