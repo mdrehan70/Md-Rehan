@@ -162,7 +162,7 @@ a{
 /* Topbar */
 .rehan-topbar{
   display:grid; 
-  grid-template-columns:1fr auto auto; 
+  grid-template-columns:1fr 1fr 1fr; 
   align-items:center; 
   text-align:center;
   gap:90px; 
@@ -172,6 +172,7 @@ a{
 
 .rehan-topbar .brand{ 
   display:flex; 
+  justify-self: start;
   gap:8px; 
   align-items:center; 
   font-weight:600; 
@@ -179,11 +180,13 @@ a{
 
 .rehan-topbar .topbar-text{ 
   text-align:center; 
+  justify-self: center;
   font-size:16px; 
   margin:0; 
 }
 
 .rehan-topbar .btn{ 
+  justify-self: end;
   width:207px; 
   height:44px; 
 }
