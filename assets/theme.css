@@ -22,35 +22,35 @@ html,body {
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+    max-width:100%;
+    height:auto;
+    display:block;
 }
 
 a {
     text-decoration: none;
-    color: inherit;
+    color:inherit;
 }
 
 .container {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 16px;
+    width:100%;
+    max-width:1440px;
+    margin:0 auto;
+    padding:0 16px;
 }
 
 .skip-to-content-link {
-    position: absolute;
-    left: 9999px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+    position:absolute;
+    left:9999px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
 }
 
 .skip-to-content-link:focus {
-    position: static;
-    width: auto;
-    height: auto;
+    position:static;
+    width:auto;
+    height:auto;
 }
 
