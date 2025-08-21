@@ -213,7 +213,6 @@ a{
   height:2px; 
   background:#000; 
   border-radius:1px;
-  transition: all 0.3s ease;
 }
 
 .hamburger::before{ 
