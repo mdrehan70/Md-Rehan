@@ -354,3 +354,20 @@ a {
     transform: translateY(30px);
     transition: transform .3s ease;
 }
+
+.popup.active .popup-content {
+    transform: translateY(0);
+}
+
+.popup-left {
+    flex: 1;
+}
+
+.popup-left img {
+    width: 85%;
+    position: relative;
+    left: 35px;
+    top: 50px;
+    height: 45%;
+    object-fit: cover;
+}
