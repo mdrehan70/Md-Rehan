@@ -371,3 +371,35 @@ a {
     height: 45%;
     object-fit: cover;
 }
+
+.popup-right {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    line-height: 1.2;
+    position: relative;
+    top: 30px;
+}
+
+h2#popupTitle {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: Jost, sans-serif;
+    margin: 0;
+}
+
+p#popupPrice.popup-price {
+    font-size: 16px;
+    font-family: Jost, sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+.popup-price {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+/* popup color */
