@@ -625,7 +625,7 @@ p#popupPrice.popup-price{
   .rehan-hero{
     min-height: 440px;
     background-size: cover;
-    background-size: auto 100%;
+    background-size: 100% auto;
     background-position: top center;
     /* background-position: center top; */
     display:flex; 
