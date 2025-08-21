@@ -748,3 +748,197 @@ p#popupPrice.popup-price {
         font-size: 13px;
     }
 }
+
+/* large desktop (3840px) */
+@media (min-width: 1900px) {
+    :root {
+        --max-w: 2844px;
+    }
+
+    .rehan-topbar {
+        padding: 26.67px 133.33px;
+        gap: 720px;
+    }
+
+    .rehan-hero {
+        min-height: 2080px;
+    }
+
+    .hero-title {
+        font-size: 164.78px;
+    }
+
+    .hero-sub {
+        font-size: 47.08px;
+        max-width: 1137px;
+    }
+
+    .rehan-hero .btn {
+        width: 517.88px;
+        height: 117.7px;
+        font-size: 37.66px;
+    }
+
+    .rehan-footnote {
+        padding: 26.67px 133.33px;
+    }
+
+    .rehan-footnote p {
+        font-size: 42.67px;
+    }
+
+    .container {
+        max-width: 2844.3px;
+    }
+
+    .grid-wrap {
+        gap: 42.48px;
+    }
+
+    .grid-card {
+        height: 943.14px;
+    }
+
+    .plus-btn {
+        width: 17.97px;
+        height: 17.97px;
+        border-width: 3.19px;
+    }
+
+    .popup-content {
+        width: 800px;
+        padding: 40px;
+    }
+}
+
+/* arrow */
+.btn .arrow {
+    width: 0%;
+    height: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 1900px) {
+    .btn .arrow {
+        width: 60px;
+        border-width: 3.53px;
+    }
+}
+
+/* inline quick view card */
+.inline-qv {
+    position: absolute;
+    top: -460px;
+    left: 0;
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    border: 1.5px solid #000000;
+    padding: 16px;
+    z-index: 999;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    animation: qvPop .2s ease;
+}
+
+.inline-qv img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid #000000;
+    margin-bottom: 8px;
+}
+
+.inline-qv .qv-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0 4px;
+}
+
+.inline-qv .qv-price {
+    font-size: 16px;
+    margin: 0 0 8px;
+    font-family: Lustria, Georgia, sans-serif;
+}
+
+.inline-qv .qv-desc {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0 0 12px;
+}
+
+.inline-qv .color-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.inline-qv .color-pill {
+    padding: 6px 12px;
+    border: 1px solid #000000;
+    cursor: pointer;
+    user-select: none;
+}
+
+.inline-qv .size-wrap {
+    position: relative;
+    border: 1px solid #000000;
+    margin-bottom: 12px;
+}
+
+.inline-qv .size-head {
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inline-qv .size-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+    border-top: 1px solid #000000;
+}
+
+.inline-qv .size-list.open {
+    max-height: 220px;
+}
+
+.inline-qv .size-item {
+    padding: 8px 12px;
+    border-bottom: 1px solid #000000;
+    cursor: pointer;
+}
+
+.inline-qv .size-item::last-child {
+    border-bottom: none;
+}
+
+.inline-qv .size-item.active {
+    background: #000000;
+    color: #ffffff;
+}
+
+.inline-qv .qv-atc {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    display: block;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.inline-qv .qv-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: none;
+    background: #F8F8F8E5;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
