@@ -21,3 +21,67 @@
     "presets": [{"name": "Grid (Rehan)"}]
 }
 {% endschema %}
+
+{% assign fallback_images = '
+    https://cdn.shopify.com/s/files/1/0588/2773/5173/files/product-1.png?v=1755600780,
+    https://cdn.shopify.com/s/files/1/0588/2773/5173/files/product-2.png?v=1755600802,
+    https://cdn.shopify.com/s/files/1/0588/2773/5173/files/product-3.png?v=1755600802,
+    https://cdn.shopify.com/s/files/1/0588/2773/5173/files/product-4.png?v=1755600802,
+    https://cdn.shopify.com/s/files/1/0588/2773/5173/files/product-5.png?v=1755600802,
+    https://cdn.shopify.com/s/files/1/0588/2773/5173/files/product-6.png?v=1755600801
+' | split: ',' %}
+
+<section id="rehan-grid" class="rehan-grid">
+    <div class="container">
+        <h2 class="grid-heading">{{ section.settings.heading }}</h2>
+
+        <div class="grid-wrap">
+            {% for block in section.blocks %}
+                {% assign p = all_products[block.settings.product] %}
+                {% assign fallback_images = fallback_images[forloop.index0] %}
+
+                <article class="grid-card" {{ block.shopify_attributes }}>
+                    <div class="card-media">
+                        {% if block.settings.custom_image != blank %}
+                            <img loading="lazy" src="{{ block.settings.custom_image | image_url }}" alt="{{ p.title | default: 'Product' }}">
+                        {% elsif p and p.featured_image %}
+                            <img loading="lazy" src="{{ p.featured_image | image_url }}" alt="{{ p.title }}">
+                        {% else %}
+                            <img loading="lazy" src="{{ fallback_image }}" alt="Fallback product {{ forloop.index }}">
+                        {% endif %}
+                    </div>
+
+                    {% if p %}
+                        <button class="plus-btn" type="button" aria-label="Quick view" data-quickview="{{ p.id }}">+</button>
+                        <script type="application/json" id="qv-{{ p.id }}">
+                            {
+                                "id": {{ p.id | json }},
+                                "title": {{ p.title | json }},
+                                "handle": {{ p.handle | json }},
+                                "description": {{ p.description | strip_html | truncate: 250 | json}},
+                                "price": {{ p.price | json }},
+                                "options": {{ p.options_with_values | json }},
+                                "variants": [
+                                    {% for v in p.variants %}
+                                        {
+                                            "id": {{ v.id | json }},
+                                            "title": {{ v.title | json }},
+                                            "available": {{ v.available | json }},
+                                            "price": {{ v.price | json }},
+                                            "options": {{ v.options | json }}
+                                        }
+                                        {% unless forloop.last %},{% endunless %}
+                                    {% endfor %}
+                                          
+                                ],
+                                "featured_image": {{ p.featured_image | image_url: '400x' | prepend:'https:' | json }}
+                            }
+                        </script>
+                    {% endif %}
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+
+    
+
