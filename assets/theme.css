@@ -637,7 +637,8 @@ p#popupPrice.popup-price{
     max-width: 340px;
     padding: 0;
     text-align:center;
-    justify-content: space-between;
+    justify-content: space-around;
+
   }
 
   .hero-title{
