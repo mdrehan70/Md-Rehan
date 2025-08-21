@@ -48,3 +48,9 @@ a {
     overflow: hidden;
 }
 
+.skip-to-content-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
