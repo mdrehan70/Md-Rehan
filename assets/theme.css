@@ -203,7 +203,9 @@ a{
   cursor: pointer;
 }
 
-.hamburger::before,.hamburger::after,.hamburger span{
+.hamburger::before,
+.hamburger::after,
+.hamburger span{
   content:""; 
   position:absolute; 
   left:0; 
@@ -211,6 +213,7 @@ a{
   height:2px; 
   background:#000; 
   border-radius:1px;
+  transition: all 0.3s ease;
 }
 
 .hamburger::before{ 
@@ -541,8 +544,9 @@ p#popupPrice.popup-price{
     align-items: center;
   }
 
-  /* .rehan-topbar .brand {
-  } */
+  .rehan-topbar .brand {
+    justify-self: center;
+  }
 
   img{ 
     max-width:100%; 
