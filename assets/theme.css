@@ -192,7 +192,7 @@ a {
     display: none;
     width: 18px;
     height: 10px;
-    border: 2px solid #000000;
+    border: 0;
     position: relative;
     background: transparent;
     padding: 0;
