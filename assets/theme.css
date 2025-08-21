@@ -609,4 +609,142 @@ p#popupPrice.popup-price {
         align-self: center;
         text-align: center;
     }
+
+    .rehan-topbar .btn {
+        width: 132px;
+        height: 36px;
+        font-size: 12px;
+        padding: 10px 12px;
+        display: none;
+    }
+
+    .rehan-hero {
+        min-height: 440px;
+        background-size: cover;
+        background-position: center top;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 24px 16px 28px;
+    }
+
+    .rehan-hero .hero-inner {
+        margin: 0 auto;
+        max-width: 340px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 30px;
+        line-height: 1.12;
+        margin: 0 0 10px;
+    }
+
+    .hero-sub {
+        font-size: 13px;
+        line-height: 1.35;
+        margin: 0 0 14px;
+    }
+
+    .rehan-hero .btn {
+        width: 190px;
+        height: 44px;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 auto;
+    }
+
+    /* footnote */
+    .rehan-footnote {
+        padding: 10px 12px;
+    }
+
+    .rehan-footnote p {
+        font-size: 11px;
+    }
+
+    /* container */
+    .container {
+        max-width: 360px;
+        padding: 0 12px;
+    }
+
+    /* grid with 2 columns only */
+    .grid-heading {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .rehan-grid {
+        padding: 40px 0;
+    }
+
+    .grid-wrap {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 6px;
+    }
+
+    .grid-card {
+        height: 186px;
+    }
+
+    .plus-btn {
+        width: 16px;
+        height: 16px;
+        right: 8px;
+        top: 8px;
+        line-height: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-content {
+        width: 86%;
+        max-width: 360px;
+    }
+
+    .popup-left img {
+        width: 85%;
+        position: relative;
+        left: 35px;
+        top: 50px;
+        height: 45%;
+        object-fit: cover;
+    }
+
+    .popup-right {
+        padding: 20px;
+        top: 0;
+    }
+
+    h2#popupTitle {
+        font-size: 15px;
+    }
+
+    p#popupPrice.popup-price {
+        font-size: 14px;
+    }
+
+    .popup-sizes p,
+    .popup-colors p {
+        font-size: 12px;
+    }
+
+    #product-size {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .popup-colors .color-buttons button {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .add-to-cart {
+        padding: 12px;
+        font-size: 13px;
+    }
 }
