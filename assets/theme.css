@@ -129,3 +129,29 @@ a {
     background: var(--black);
     color: var(--white);
 }
+
+.btn-fill.arrow-anim::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    transform: translateX(-100%);
+    transition: transform .35s ease;
+    z-index: 0;
+}
+
+.btn-fill.arrow-anim:hover::before {
+    transform: translateX(0);
+}
+
+.btn-fill.arrow-anim span,
+.btn-fill.arrow-anim .arrow {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-fill.arrow-anim:hover {
+    color: var(--black);
+}
+
+
