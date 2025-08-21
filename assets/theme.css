@@ -626,8 +626,7 @@ p#popupPrice.popup-price{
     min-height: 440px;
     background-size: cover;
     background-size: 100% auto;
-    background-position: top center;
-    /* background-position: center top; */
+    background-position: bottom center;
     display:flex; 
     align-items:flex-end; 
     justify-content:center;
