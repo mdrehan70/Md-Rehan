@@ -1,0 +1,23 @@
+{% schema %}
+{
+    "name": "Grid (Rehan)",
+    "settings": [
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Tisso vison in the wild" },
+        { "type": "product", "id": "soft_jacket_product", "label": "Soft Winter Jacket (auto-add product)" }
+    ],
+
+    "blocks": [
+        {
+            "type": "product",
+            "name": "Product card",
+            "settings": [
+                { "type": "product", "id": "product", "label": "Product" },
+                { "type": "image_picker", "id": "custom_image", "label": "Custom image (optional)" }
+            ]
+        }
+    ],
+
+    "max_blocks": 6,
+    "presets": [{"name": "Grid (Rehan)"}]
+}
+{% endschema %}
