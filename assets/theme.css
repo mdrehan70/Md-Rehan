@@ -603,8 +603,11 @@ p#popupPrice.popup-price{
     display: none;
     font-size: 12px;
     white-space: nowrap;
-    overflow: hidden; text-overflow: ellipsis;
-    margin: 0; align-self: center; text-align: center;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    margin: 0; 
+    align-self: center; 
+    text-align: center;
   }
 
   .rehan-topbar .btn{ 
@@ -619,7 +622,9 @@ p#popupPrice.popup-price{
     min-height: 440px;
     background-size: cover;
     background-position: center top;
-    display:flex; align-items:flex-end; justify-content:center;
+    display:flex; 
+    align-items:flex-end; 
+    justify-content:center;
     padding: 24px 16px 28px;
   }
 
