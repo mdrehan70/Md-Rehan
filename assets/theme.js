@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function openProductPopup(product, productId) {
     console.clear();
-    console.log('🔹 Attempting to load product ID:', productId);
+    console.log('Attempting to load product ID:', productId);
     console.log('Product raw data:', product);
 
     if(!product) {
-      console.warn('❌ Product data missing, showing fallback.');
+      console.warn('Product data missing, showing fallback.');
       product = {
         featured_image: fallbackImage,
         title: fallbackTitle,
@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
       };
     }
 
-    if(!product.featured_image) console.warn('⚠️ Missing featured_image for product ID:', productId);
-    if(!product.title) console.warn('⚠️ Missing title for product ID:', productId);
-    if(!product.variants || product.variants.length === 0) console.warn('⚠️ No variants for product ID:', productId);
+    if(!product.featured_image) console.warn('Missing featured_image for product ID:', productId);
+    if(!product.title) console.warn('Missing title for product ID:', productId);
+    if(!product.variants || product.variants.length === 0) console.warn('No variants for product ID:', productId);
 
     let optsHTML = '';
     (product.options || []).forEach(opt => {
@@ -86,8 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const selectedColor = $('.popup-colors button.active', popup)?.textContent?.trim();
         const selectedSize = $('#product-size', popup)?.value;
 
-        // Find correct variant
-        let chosenVariant = product.variants[0]; // fallback
+        let chosenVariant = product.variants[0];
         if (product.variants && product.variants.length > 0) {
           chosenVariant = product.variants.find(v => {
             const matchesColor = selectedColor ? v.option1 === selectedColor : true;
@@ -103,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
           return;
         }
 
-        // Add to cart request
         await fetch('/cart/add.js', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -112,7 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
           }),
         });
 
-        // Close popup and redirect
         popup.classList.remove('active');
         setTimeout(() => popup.classList.add('hidden'), 300);
         document.body.style.overflow = '';
@@ -134,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const productId = btn.dataset.quickview;
       const script = document.getElementById(`qv-${productId}`);
       const product = safeParse(script?.textContent);
-      if(!product) console.warn(`❌ Product ID ${productId} JSON missing or invalid.`);
+      if(!product) console.warn(`Product ID ${productId} JSON missing or invalid.`);
       openProductPopup(product, productId);
       return;
     }
@@ -152,13 +149,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const closeMenu = document.querySelector(".close-menu");
 
   if (hamburger && mobileMenu) {
-    // Open menu
     hamburger.addEventListener("click", () => {
       mobileMenu.classList.remove("hidden");
       mobileMenu.classList.add("active");
     });
 
-    // Close menu
     if (closeMenu) {
       closeMenu.addEventListener("click", () => {
         mobileMenu.classList.remove("active");
