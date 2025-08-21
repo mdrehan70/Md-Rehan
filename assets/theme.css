@@ -540,6 +540,10 @@ p#popupPrice.popup-price{
     box-shadow: 0 2px 4px rgba(0,0,0,.08);
   }
 
+  .rehan-topbar .brand {
+    text-align: center;
+  }
+
   img{ 
     max-width:100%; 
     height:400px; 
