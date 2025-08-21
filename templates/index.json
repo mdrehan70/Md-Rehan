@@ -9,33 +9,72 @@
  */
 {
   "sections": {
-    "banner": {
+    "banner-rehan": {
       "type": "banner-rehan",
-      "name": "Banner (Rehan)",
-      "settings": {
-        "heading": "The Gift Guide",
-        "subheading": "Discover joy...",
-        "primary_label": "Shop now",
-        "primary_link": "",
-        "secondary_label": "Learn more",
-        "secondary_link": ""
-      }
+      "settings": {}
     },
-    "grid": {
+    "grid-rehan": {
       "type": "grid-rehan",
-      "name": "Grid (Rehan)",
+      "blocks": {
+        "item1": {
+          "type": "product",
+          "settings": {
+            "product": "black-leather-bag",
+            "custom_image": "shopify://shop_images/product-1.png"
+          }
+        },
+        "item2": {
+          "type": "product",
+          "settings": {
+            "product": "blue-silk-tuxedo",
+            "custom_image": "shopify://shop_images/product-2.png"
+          }
+        },
+        "item3": {
+          "type": "product",
+          "settings": {
+            "product": "chequered-red-shirt",
+            "custom_image": "shopify://shop_images/product-3.png"
+          }
+        },
+        "item4": {
+          "type": "product",
+          "settings": {
+            "product": "classic-leather-jacket",
+            "custom_image": "shopify://shop_images/product-4.png"
+          }
+        },
+        "item5": {
+          "type": "product",
+          "settings": {
+            "product": "classic-varsity-top",
+            "custom_image": "shopify://shop_images/product-5.png"
+          }
+        },
+        "item6": {
+          "type": "product",
+          "settings": {
+            "product": "dark-denim-top",
+            "custom_image": "shopify://shop_images/product-6.png"
+          }
+        }
+      },
+      "block_order": [
+        "item1",
+        "item2",
+        "item3",
+        "item4",
+        "item5",
+        "item6"
+      ],
       "settings": {
-        "product_1": "",
-        "product_2": "",
-        "product_3": "",
-        "product_4": "",
-        "product_5": "",
-        "product_6": ""
+        "heading": "Tisso vison in the wild",
+        "soft_jacket_product": ""
       }
     }
   },
   "order": [
-    "banner",
-    "grid"
+    "banner-rehan",
+    "grid-rehan"
   ]
 }
