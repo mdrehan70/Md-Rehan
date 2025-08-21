@@ -645,12 +645,16 @@ p#popupPrice.popup-price{
     font-size: 30px;
     line-height: 1.12;
     margin: 0 0 10px;
+    position: relative;
+    bottom: 60px;
   }
 
   .hero-sub{
     font-size: 13px;
     line-height: 1.35;
     margin: 0 0 14px;
+    position: relative;
+    bottom: 40px;
   }
 
   .rehan-hero .btn{
@@ -659,6 +663,8 @@ p#popupPrice.popup-price{
     font-size: 16px;
     font-weight: 400;
     margin: 0 auto;
+    position: relative;
+    top: 80px;
   }
 
   /* footnote */
