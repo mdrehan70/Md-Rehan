@@ -622,9 +622,9 @@ p#popupPrice.popup-price{
   }
 
   .rehan-hero{
-    min-height: 300px;
+    min-height: 440px;
     background-size: cover;
-    background-position: top;
+    background-position: center top;
     display:flex; 
     align-items:flex-end; 
     justify-content:center;
