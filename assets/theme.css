@@ -489,3 +489,39 @@ p#popupPrice.popup-price {
     font-size: 28px;
     cursor: pointer;
 }
+
+/* when user click on the add to cart button then comes this notification */
+.cart-toast {
+    position: fixed;
+    button: 20px;
+    right: 20px;
+    background: #111111;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.cart-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cart-toast .view-cart-btn {
+    background: #ffffff;
+    color: #111111;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.mobile-menu {
+    display: none;
+}
