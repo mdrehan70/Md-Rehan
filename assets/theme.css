@@ -111,3 +111,21 @@ a {
     z-index: 0;
 }
 
+.btn-outline.arrow-anim:hover::before {
+    transform: translateX(0);
+}
+
+.btn-outline.arrow-anim span,
+.btn-outline.arrow-anim .arrow {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-outline.arrow-anim:hover {
+    color: var(--white);
+}
+
+.btn-fill {
+    background: var(--black);
+    color: var(--white);
+}
