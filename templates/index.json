@@ -1,1 +1,41 @@
-{"sections":{"banner":{"type":"banner-rehan","settings":{}},"grid":{"type":"grid-rehan","settings":{}}},"order":["banner","grid"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "banner-rehan",
+      "name": "Banner (Rehan)",
+      "settings": {
+        "heading": "The Gift Guide",
+        "subheading": "Discover joy...",
+        "primary_label": "Shop now",
+        "primary_link": "",
+        "secondary_label": "Learn more",
+        "secondary_link": ""
+      }
+    },
+    "grid": {
+      "type": "grid-rehan",
+      "name": "Grid (Rehan)",
+      "settings": {
+        "product_1": "",
+        "product_2": "",
+        "product_3": "",
+        "product_4": "",
+        "product_5": "",
+        "product_6": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "grid"
+  ]
+}
