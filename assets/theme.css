@@ -39,7 +39,7 @@ a {
     padding: 0 16px;
 }
 
-/* .skip-to-content-link {
+.skip-to-content-link {
     position: absolute;
     left: 9999px;
     top: auto;
@@ -52,5 +52,47 @@ a {
     position: static;
     width: auto;
     height: auto;
-} */
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1;
+    padding: 13px; 24px;
+    transition: transform .2s ease;
+}
+
+.btn:active {
+    transform: scale(.98);
+}
+
+.btn .arrow {
+    display: inline-block;
+    margin-left: 14px;
+}
+
+.btn-outline,
+.btn-fill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    font-family: Jost, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 4px;
+    transition: color .3s ease, background .3s ease;
+}
 
