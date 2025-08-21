@@ -628,7 +628,7 @@ p#popupPrice.popup-price{
     background-size: 100% auto;
     background-position: bottom center;
     display:flex; 
-    align-items:flex-start; 
+    /* align-items:flex-start;  */
     justify-content:center;
     padding: 24px 16px 28px;
   }
@@ -645,12 +645,14 @@ p#popupPrice.popup-price{
     font-size: 30px;
     line-height: 1.12;
     margin: 0 0 10px;
+    align-items: flex-start;
   }
 
   .hero-sub{
     font-size: 13px;
     line-height: 1.35;
     margin: 0 0 14px;
+    align-items: flex-start;
   }
 
   .rehan-hero .btn{
