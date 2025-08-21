@@ -628,7 +628,7 @@ p#popupPrice.popup-price{
     background-size: 100% auto;
     background-position: bottom center;
     display:flex; 
-    /* align-items:flex-start;  */
+    align-items:flex-start; 
     justify-content:center;
     padding: 24px 16px 28px;
   }
@@ -638,7 +638,7 @@ p#popupPrice.popup-price{
     max-width: 340px;
     padding: 0;
     text-align:center;
-    justify-content: space-around;
+    /* justify-content: space-between; */
   }
 
   .hero-title{
