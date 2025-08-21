@@ -1,0 +1,72 @@
+{% schema %}
+{
+    "name": "Banner (Rehan)",
+    "settings": [
+        { "type": "text", "id": "brand_text_left", "label": "Brand Left", "default": "TISSO" },
+        { "type": "text", "id": "brand_text_right", "label": "Brand Right", "default": "VISON" },
+
+        { "type": "color", "id": "topbar_bg", "label": "Topbar background", "default": "#F5F5F5" },
+        { "type": "text", "id": "topbar_text", "label": "Topbar tagline", "default": "Find the ideal gift for your loved ones." },
+        { "type": "text", "id": "choose_gift_label", "label": "Choose Gift Button Label", "default": "CHOOSE GIFT" },
+
+        { "type": "image_picker", "id": "hero_bg", "label": "Hero background image" },
+        { "type": "text", "id": "hero_title", "label": "Hero title", "default": "The Gift Guide" },
+        { "type": "textarea", "id": "hero_subtext", "label": "Hero paragraph", "default": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season." },
+        { "type": "text", "id": "cta_label", "label": "Primary CTA label", "default": "SHOP NOW" },
+
+        { "type": "text", "id": "hero_note", "label": "Bottom note", "default": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL" }
+    ]
+}
+{% endschema %}
+
+<section class="rehan-banner">
+    <div class="rehan-topbar" style="background: {{ section.settings.topbar_bg }};">
+        <button class="hamburger" type="button" aria-label="Open menu">
+            <span></span>
+        </button>
+
+        <div class="brand">
+            <span class="brand-left">{{ section.settings.brand_text_left }}</span>
+            <span class="brand-right">{{ section.settings.brand_text_right }}</span>
+        </div>
+
+        <p class="topbar-text">{{ section.settings.topbar_text }}</p>
+
+        <a href="#" class="btn btn-outline arrow-anim" aria-label="{{ section.settings.choose_gift_label }}">
+            <span>{{ section.settings.choose_gift_label }}</span>
+            <i class="arrow">→</i>
+        </a>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu hidden">
+        <button class="close-menu" aria-label="Close menu">&times;</button>
+        <div class="mobile-menu-content">
+            <div class="brand">
+                <span class="brand-left">{{ section.settings.brand_text_left }}</span>
+                <span class="brand-right">{{ section.settings.brand_text_right }}</span>
+            </div>
+
+            <p class="topbar-text">{{ section.settings.topbar_text }}</p>
+            <a href="#" class="btn btn-outline arrow-anim" aria-label="{{ section.settings.choose_gift_label }}">
+                <span>{{ section.settings.choose_gift_label }}</span>
+                <i class="arrow">→</i>
+            </a>
+        </div>
+    </div>
+
+    {% comment %} Hero {% endcomment %}
+    <div class="rehan-hero" style="background-image: url('{% if section.settings.hero_bg != blank %}{{ section.settings.hero_bg | img_url: 'master' }}{% else %}{{ 'hero-banner.png' | fire_url }}{% endif %}');">
+        <div class="hero-inner">
+            <h1 class="hero-title">{{ section.settings.hero_title }}</h1>
+            <p class="hero-sub">{{ section.settings.hero_subtext }}</p>
+            <a href="#rehan-grid" class="btn btn-fill arrow-anim">
+                <span>{{ section.settings.cta_label }}</span>
+                <i class="arrow">→</i>
+            </a>
+        </div>
+    </div>
+
+    <div class="rehan-footnote">
+        <p>{{ section.settings.hero_note }}</p>
+    </div>
+</section>

@@ -1,0 +1,117 @@
+{% schema %}
+{
+  "name": "Grid (Rehan) - Fixed",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Tisson Vison in the wild" },
+    { "type": "product", "id": "soft_jacket_product", "label": "Soft Winter Jacket (auto-add product)" }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product card",
+      "settings": [
+        { "type": "product", "id": "product", "label": "Product" },
+        { "type": "image_picker", "id": "custom_image", "label": "Custom image (optional)" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [{ "name": "Grid (Rehan) - Fixed" }]
+}
+{% endschema %}
+
+{% assign fallback_images = '
+https://cdn.shopify.com/s/files/1/0588/2773/5173/files/product-1.png?v=1755600780,
+https://cdn.shopify.com/s/files/1/0588/2773/5173/files/product-2.png?v=1755600802,
+https://cdn.shopify.com/s/files/1/0588/2773/5173/files/product-3.png?v=1755600802,
+https://cdn.shopify.com/s/files/1/0588/2773/5173/files/product-4.png?v=1755600802,
+https://cdn.shopify.com/s/files/1/0588/2773/5173/files/product-5.png?v=1755600802,
+https://cdn.shopify.com/s/files/1/0588/2773/5173/files/product-6.png?v=1755600801
+' | split: ',' %}
+
+<section id="rehan-grid" class="rehan-grid">
+  <div class="container">
+    <h2 class="grid-heading">{{ section.settings.heading }}</h2>
+
+    <div class="grid-wrap">
+      {% for block in section.blocks %}
+        {% assign p = all_products[block.settings.product] %}
+        {% assign fallback_image = fallback_images[forloop.index0] %}
+
+        <article class="grid-card" {{ block.shopify_attributes }}>
+          <div class="card-media">
+            {% if block.settings.custom_image != blank %}
+              <img
+                loading="lazy"
+                src="{{ block.settings.custom_image | image_url }}"
+                alt="{{ p.title | default: 'Product' }}"
+              >
+            {% elsif p and p.featured_image %}
+              <img loading="lazy" src="{{ p.featured_image | image_url }}" alt="{{ p.title }}">
+            {% else %}
+              <img loading="lazy" src="{{ fallback_image }}" alt="Fallback product {{ forloop.index }}">
+            {% endif %}
+          </div>
+
+          {% if p %}
+            <button class="plus-btn" type="button" aria-label="Quick view" data-quickview="{{ p.id }}">+</button>
+
+            <script type="application/json" id="qv-{{ p.id }}">
+              {
+                "id": {{ p.id | json }},
+                "title": {{ p.title | json }},
+                "handle": {{ p.handle | json }},
+                "description": {{ p.description | strip_html | truncate: 250 | json }},
+                "price": {{ p.price | json }},
+                "options": {{ p.options_with_values | json }},
+                "variants": [
+                  {% for v in p.variants %}
+                    {
+                      "id": {{ v.id | json }},
+                      "title": {{ v.title | json }},
+                      "available": {{ v.available | json }},
+                      "price": {{ v.price | json }},
+                      "options": {{ v.options | json }}
+                    }{% unless forloop.last %},{% endunless %}
+                  {% endfor %}
+                ],
+                "featured_image": {{ p.featured_image | img_url: '400x' | prepend: 'https:' | json }}
+              }
+            </script>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% comment %} popup {% endcomment %}
+  <div class="popup hidden" id="popupContainer">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <div class="popup-left">
+        <img src="" alt="">
+      </div>
+      <div class="popup-right">
+        <h2 id="popupTitle"></h2>
+        <p id="popupPrice" class="popup-price"></p>
+        <p id="popupDesc"></p>
+
+        <div id="popupOptions"></div>
+
+        <button class="add-to-cart">ADD TO CART →</button>
+      </div>
+    </div>
+  </div>
+
+  {% if section.settings.soft_jacket_product != blank %}
+    {% assign softp = all_products[section.settings.soft_jacket_product] %}
+    {% if softp %}
+      <script type="application/json" id="soft-bundle">
+        {
+          "title": {{ softp.title | json }},
+          "first_variant_id": {{ softp.first_available_variant.id | json }}
+        }
+      </script>
+    {% endif %}
+  {% endif %}
+</section>
