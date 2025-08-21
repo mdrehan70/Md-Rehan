@@ -1,13 +1,17 @@
 [
-  {
-    "name": "Theme settings",
-    "settings": [
-      {
-        "type": "text",
-        "id": "dummy",
-        "label": "Dummy Text",
-        "default": "Enter text here"
-      }
-    ]
-  }
+    {
+        "name": "Theme settings",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Global"
+            },
+            {
+                "type": "checkbox",
+                "id": "enable_animations",
+                "label": "Enable hover animations",
+                "default": true
+            }
+        ]
+    }
 ]
