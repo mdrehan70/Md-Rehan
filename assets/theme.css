@@ -210,3 +210,15 @@ a {
     background: #000;
     border-radius: 1px;
 }
+
+.hamburger::before {
+    top: 0;
+}
+
+.hamburger span {
+    top: 8px;
+}
+
+.hamburger::after {
+    bottom: 0;
+}
